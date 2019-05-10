@@ -43,15 +43,25 @@ class CardDealer extends React.Component {
   }
 
   render() {
-    let cards = this.state.drawn.map(card => (
-      <Card key={card.id} image={card.image} name={card.value} />
-    ));
+    let cards = this.state.drawn.map(card => <Card key={card.id} {...card} />);
     return (
       <div>
-        <h1 className="CardDealer-title">🃏Card Dealer 🃏</h1>
+        <h1 className="CardDealer-title">
+          <span role="img" aria-label="card-joker">
+            🃏
+          </span>
+          Card Dealer
+          <span role="img" aria-label="card-joker">
+            🃏
+          </span>
+        </h1>
         <p className="CardDealer-author">
           Made by{" "}
-          <a href="https://github.com/quangnd/card-dealer-reactjs" target="_blank">
+          <a
+            href="https://github.com/quangnd/card-dealer-reactjs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Mun
           </a>{" "}
           with ❤️
