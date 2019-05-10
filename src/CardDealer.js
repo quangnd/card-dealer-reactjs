@@ -22,7 +22,6 @@ class CardDealer extends React.Component {
     }/draw/`;
     try {
       let response = await axios.get(cardUrl);
-      console.log(response.data);
       if (response.data.success) {
         let card = response.data.cards[0];
         this.setState(st => ({
