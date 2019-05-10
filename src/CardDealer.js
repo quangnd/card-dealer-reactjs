@@ -52,7 +52,7 @@ class CardDealer extends React.Component {
         <h1 className="CardDealer-title">🃏Card Dealer 🃏</h1>
         <p className="CardDealer-author">
           Made by{" "}
-          <a href="https://github.com/crobertsbmw/deckofcards" target="_blank">
+          <a href="https://github.com/quangnd/card-dealer-reactjs" target="_blank">
             Mun
           </a>{" "}
           with ❤️
