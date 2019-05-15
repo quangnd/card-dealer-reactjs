@@ -11,9 +11,13 @@ class CardDealer extends React.Component {
   }
 
   async componentDidMount() {
-    const url = `https://deckofcardsapi.com/api/deck/new/shuffle/`;
-    let response = await axios.get(url);
-    this.setState({ deck: response.data });
+    const url = `https://deckofcardsapi.com/api/deck/new/shuffledsfasd/`;
+    try {
+      let response = await axios.get(url);
+      this.setState({ deck: response.data });
+    } catch (error) {
+      alert('Deck API is not working now!')
+    }
   }
 
   async dealCard() {
